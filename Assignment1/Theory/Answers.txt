@@ -1,38 +1,60 @@
 Ques-1: What is Emmet?
 
 Ans: Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow. We can use short expressions to generate HTML markup, CSS. 
+Emmet uses different abbreviations and short expressions depending on what’s passed, and then dynamically converts the abbreviations into the full code.
 
 
 Ques-2 : Difference between Framework and Library ?
 
-Ans: 1. Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
-2. A framework inverts the control of the program. It tells the developer what they need. A library doesn’t. The programmer calls the library where and when they need it.
-3. The degree of freedom a library or framework gives the developer will dictate how “opinionated” it is.
+Ans: Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
 
+Library: 
+A set of assistance modules, objects, classes, functions, pre-written code, and so on. 
+Can be easily substituted by another library.
+When we call a method from a library, we are in control.
+Since developing a library needs less code, performance and load time are improved.
+Libraries can be simply linked into existing programs to add specific functionality.
 
+Framework: 
+Includes a variety of APIs, compilers, support applications, libraries, and so on.
+Are tough to replace. 
+Inversion of control, i.e. the framework calls us.
+The construction of a framework necessitates large amounts of code, which reduces performance and increases load time.
+It is tough to incorporate a framework seamlessly into an existing project.
 
 Ques-3 : What is CDN ? Why do we use it?
 
-Ans: A CDN (content delivery network), also called a content distribution network, is a group of geographically distributed and interconnected servers. They provide cached internet content from a network location closest to a user to speed up its delivery.
+Ans: A CDN (content delivery network), also called a content distribution network, is a group of geographically distributed and interconnected servers. 
+They provide cached internet content from a network location closest to a user to speed up its delivery.
 The primary goal of a CDN is to improve web performance by reducing the time needed to send content and rich media to users.
-
 
 Use of CDN: The main use of a CDN is to deliver content through a network of servers in a secure and efficient way. These networks improve the content security, performance and availability. Other CDN use cases include collecting user analytics and tracking data on network traffic. CDNs serve a range of content, including websites, mobile applications, streaming media and downloadable objects.
 
 Ques -4: Why React known as React?
 
-Ans: React is called React because it is a library that reacts to changes in data and updates the user interface accordingly. The name "React" reflects its purpose of reacting to changes in data and rendering the appropriate changes in the user interface.
-
+Ans: React is called React because it is a library that reacts to changes in data and updates the user interface accordingly.
+The name "React" reflects its purpose of reacting to changes in data and rendering the appropriate changes in the user interface.
+React was originally created by Facebook in 2011 for use in their own web applications, and it was released as an open-source project in 2013.
 
 Ques -5: What is cross-origin attribute in script tag?
 
-Ans: The crossorigin attribute sets the mode of the request to an HTTP CORS Request. A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+Ans: The cross-origin attribute sets the mode of the request to an HTTP CORS Request. 
+A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+Cross-origin resource sharing (CORS) is a mechanism for integrating applications. 
+CORS defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. 
+This is useful because complex applications often reference third-party APIs and resources in their client-side code. 
+For example, your application may use your browser to pull videos from a video platform API, use fonts from a public font library, 
+or display weather data from a national weather database. 
+CORS allows the client browser to check with the third-party servers if the request is authorized before any data transfers.
 
 Ques - 6: Difference between react and reactDOM ?
 
-Ans: The react package holds the react source for components, state, props and all the code that is react.
+Ans: The react package holds the react source for components, state, props and all the code that is react. The react package contains React.createElement(), React.Component, React.Children, and other helpers related to elements and component classes. 
+You can think of these as the isomorphic or universal helpers that you need to build components.
 
-The react-dom package as the name implies is the glue between React and the DOM. Often, you will only use it for one single thing: mounting your application to the index.html file with ReactDOM.render().
+The react-dom package as the name implies is the glue between React and the DOM. The react-dom package contains ReactDOM.render(), and in react-dom/server we 
+have server-side rendering support with ReactDOMServer.renderToString() and ReactDOMServer.renderToStaticMarkup().
+Often, you will only use it for one single thing: mounting your application to the index.html file with ReactDOM.render().
 
 
 Ques - 7 : What is difference between react. development. js and react. production. js files via CDN?
@@ -42,6 +64,8 @@ Ans:The development version includes extra warnings about common mistakes, where
 
 Ques - 8 : Async vs defer ?
 
-Ans : The async and defer attributes both allow the browser to continue parsing the HTML document while JavaScript files are being downloaded, but they differ in when those files are executed.
+Ans : 
+The async and defer attributes both allow the browser to continue parsing the HTML document while JavaScript files are being downloaded, but they differ in when those files are executed.
 
-Async downloads and executes JavaScript as soon as it’s available, while defer attribute waits until the HTML document has been parsed before downloading and executing any external scripts.
+Async downloads and executes JavaScript as soon as it’s available. Async allows your script to run as soon as it’s loaded, without blocking other elements on the page
+Defer attribute waits until the HTML document has been parsed before downloading and executing any external scripts. script will only execute after the page has finished loading. In most cases, async is the better option — but there are exceptions.
