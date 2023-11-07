@@ -1,0 +1,112 @@
+# Assignment 2 - Epsisode 02 - Igniting our app
+
+
+1. What is NPM?
+Open-source developers use npm to share software also a software Package Manager and Installer.
+NPM is many things but not Node Package Manager. The name npm (Node Package Manager) stems from when npm first was created as a package manager for Node.js.
+NPM is a Open Source package manager for javascript programming language and is the default package manager for nodejs. 
+NPM helps developers to share and reuse code for building their applications. 
+NPM is like a database for packages.
+It allows us in installing a package, updating, uninstalling and publishing a package to the NPM registry where it can be accessed by others and downloaded to use for their projects.
+You have to install `Node.js` to get npm installed on your computer from the official site of `Node.js`
+npm is free to use.you can download all npm public software packages without and registration or login.
+All npm packages are defined in files called package.json.
+The content of package.json must be written in JSON.
+At least two fields must be present in the definition file: name and version.
+Many organizations also use npm to manage private developement
+
+2. What is 'Parcel/Webpack'? why do we need it?
+Parcel and Webpack are module bundlers, which is used to minify and clean our code for deployment. 
+We need them to improve our application performance, reduce overall file size by making our code compact.
+
+3. What is .parcel-cache?
+'.parcel-cache' stores information about our project when parcel builds it, so that when parcel rebuilds, it doesn't have to re-parse and re-analyse everything from scratch. 
+It's the reason why parcel is so fast during development. Parcel uses this code for caching.
+
+4. what is 'npx'?
+'npx' stands for 'Node Package eXecute'. It is a command that is used to execute/run any package from the npm registry directly without installing it.
+
+5. What is the difference between 'dependencies' and 'devDependencies'?
+Dependencies are the list of packages that are required to run our application in production or testing environment, 
+whereas devDependencies are the packages that are required only in the project development environment.
+
+6. What is Tree shaking?
+Tree shaking is a technique that is used for optimizing our code performance by eliminating the dead/unused codes.
+
+7. What is Hot Module Replacement?
+Hot Module Replacement (HMR) adds or removes modules while an application is running, without a full reload. 
+Because it uses `file watcher algorithm` to keep track of file changes while development and render those changes on the web page.
+This helps to retain its state values, and saves valuable development time by only updating what has changed.
+
+8. List down your favorite 5 superpowers of parcel and describe any 3 of them in your own code?
+- Dev Build
+- Local Server
+- HMR >Hot Module Replacement - chnaging the each changes , instantly its reflecting in browser without refreshing
+- file watcher algoritham - written in C++ > keep tracking all the file and once the changes made , its automatically updating in browser 
+- Caching - Faster Development builds > its caching the file which is already in build, and its only build and replace the which file made change. so it is making developmnet build fast.
+- Image Optimization - its basically do image optimization
+- Minification files - its used to do the minify the all the file in production
+- Bundling - its used to do the bundle all the files
+- Compression - compress all the files
+- Consistent Hashing
+- File Splitting
+- Differential Bundling - it used to support the older browsers (diffrent type of older browsers) 
+- Diagnostics
+- Error Handling - gives you to easily understandable errors in console
+- HTTPS
+- Tree Shaking - remove unused code
+- Auto install - When you use package or plug-in that is not included by default, parcel will automatically install that package or plug-in for you. When this will happen you will see message in the terminal. 
+- `Zero Config` = It also gives to us zero requirement while we using it first time.
+- `Image optimization` = It gives to us very useful feature is Image Optimization using this feature we can optimize our image so, it can huge impact on web page reloading.
+
+Q9. What is .gitignore? What should we add and not add into it?
+Ans:: .gitignore is a specific file which GIT ignores its contents. We should add all files which can be regenerated into this file.
+we should never add that file inside that we can't exact regenerate through the server like package.json., package-lock.json  - like our core code files, our stylesheets and important files, data files etc.
+inside that file stored some data about that app development like version, name etc. or below:
+
+Operating system files
+Application files
+Language and framework files
+Files downloaded with package managers
+Credentials
+
+Q10. What is the difference between package.json and package-lock.json?
+Ans:: 
+package.json file is configuration of NPM. when we do npm install it will install all packages which are in package.json file. 
+It defines the rules required to run your application and install dependencies. we define the bundler version (~ and ^ ) and browserList etc.
+package.json: records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
+
+The `package-lock.json` records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
+file holds detailed information on all the dependencies installed based on the package.json rules.like 
+It hold actual version of bundler we use inside while the development.
+package-lock.json file contains the exact version of package which has been installed in our app.
+
+Q11. Why should I not modify package-lock.json?
+Ans:: It is a generated file and is not designed to be manually edited. Its purpose is to track the entire tree of dependencies (including dependencies of dependencies) and the exact version of each dependency
+we should never modify the package-lock.json because its holds the actual detailed information about while development. 
+we should never add to that file inside .gitignore because that information required when we recreate that app.
+
+Q12. What is node_modules ? Is it a good idea to push that on git?
+Ans:: node_modules contains the code for all packages which has been installed in out app. It handles all the dependencies like dependencies, devDependencies and transitive dependencies of packages.
+It is not a good idea to push node_modules into git. Because these node_modules we can regenerate by doing npm install. 
+We need to push only those files which we can not regenerate.
+node_modules folder size is very large and heavy (up to Gigabytes). Its can affect on our repository.
+
+Q13. What is the dist folder?
+Ans:: The dist folder is where the compiled code is stored. This is the code that is ready to be deployed to a production environment.
+The purpose of the src and dist folders is to keep the source code and the compiled code separate. This helps to ensure that the code is kept organized and that the compiled version is always up-to-date. 
+It also makes it easier to debug and maintain the code. The src folder is where developers write their code, while the dist folder is where the compiled code is stored.
+After run the build command (npx parcel build index.html) in an application the dist folder is automatically generated. 
+The folder contains the build scripts of the application compressed and minified code. This folder actually gets deployed in the real application.
+
+Q14. What is browserlists?
+Ans:: BrowserLists is a tool or package which can specify the compatibilty of the application with the browser. 
+Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. 
+It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
+we can also modify that browserlist by itself. ex- "last 2 versions" and "last 2 chrome versions" etc. 
+Its means that it definetly works on last 2 versions properly but it also work on other version but not that much guarantee for other version working properly.
+
+## Note: Diff b/w `~` and `^` ?
+- `~`version = 	Approximately equivalent to version, i.e., only accept new patch versions(`~`1.1.2)
+- `^`version =	Compatible with version, i.e., accept new minor and patch versions(`^`1.1.3)
+- version  =   Must match version exactly(1.1.3)
