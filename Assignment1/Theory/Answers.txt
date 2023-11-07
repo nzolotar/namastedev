@@ -1,7 +1,16 @@
 Ques-1: What is Emmet?
 
 Ans: Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow. We can use short expressions to generate HTML markup, CSS. 
-Emmet uses different abbreviations and short expressions depending on what’s passed, and then dynamically converts the abbreviations into the full code.
+Emmet uses different abbreviations and short expressions depending on what’s passed, and then dynamically converts the abbreviations into the full code.  
+For example, you can type an abbreviation like
+div>ul>li*2 and then use the Emmet expansion feature to automatically generate
+the following code:
+<div>
+ <ul>
+ <li></li>
+ <li></li>
+ </ul>
+</div>
 
 
 Ques-2 : Difference between Framework and Library ?
@@ -21,6 +30,9 @@ Are tough to replace.
 Inversion of control, i.e. the framework calls us.
 The construction of a framework necessitates large amounts of code, which reduces performance and increases load time.
 It is tough to incorporate a framework seamlessly into an existing project.
+
+In summary, a library provides specific functions or tools that developers can use to solve particular problems or tasks, 
+while a framework provides a more structured and comprehensive environment that defines the overall architecture of an application and guides developers in building it.
 
 Ques-3 : What is CDN ? Why do we use it?
 
@@ -69,3 +81,23 @@ The async and defer attributes both allow the browser to continue parsing the HT
 
 Async downloads and executes JavaScript as soon as it’s available. Async allows your script to run as soon as it’s loaded, without blocking other elements on the page
 Defer attribute waits until the HTML document has been parsed before downloading and executing any external scripts. script will only execute after the page has finished loading. In most cases, async is the better option — but there are exceptions.
+
+
+ <script async src= “” />
+→ While using async, the HTML parsing doesn’t stop and the
+script from network is fetched asynchronously (the fetching is
+done while HTML parsing is going on).
+→ Now when the fetching is done, the HTML parser stops till the
+script is executed. Once the script is executed the HTML parsing
+resumes.
+
+ <script defer src= “” />
+→ In case of defer, the HTML parsing goes on and while it
+fetching the script. The execution of the script is only done
+once the whole HTML parsing is completed.
+→ The important thing is that the async attribute doesn’t guarantee
+the order of the execution of the script. But defer does.
+→ In case of interdependent scripts, async shouldn’t be used.
+→ In case of external scripts like google analytics, etc., it is not advisable
+to use async.
+→ defer is best to be used in most of the scenarios.
