@@ -1,0 +1,27 @@
+{
+  "name": "namastedev",
+  "version": "1.0.0",
+  "description": "this is practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzolotar/namastedev.git"
+  },
+  "keywords": [
+    "react",
+    "namastedev",
+    "namaste",
+    "react",
+    "akshay",
+    "saini"
+  ],
+  "author": "Natalia Zolotareva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nzolotar/namastedev/issues"
+  },
+  "homepage": "https://github.com/nzolotar/namastedev#readme"
+}
